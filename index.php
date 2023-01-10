@@ -10,6 +10,14 @@ include_once __DIR__ . "/db.php";
     <title>PHP OOP 2</title>
 </head>
 <body>
-    
+    <ul>
+        <?php foreach($foods as $food) { ?>
+            <li>
+                <?php echo "<img src=\"{$food->image}\"/>" ?>
+                <h2><?php echo $food->name ?></h2>
+                <h4><?php echo $food->brand ?></h4>
+            </li>
+        <?php } ?>
+    </ul>
 </body>
 </html>
