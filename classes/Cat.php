@@ -1,5 +1,5 @@
 <?php
 class Cat {
     public $name;
-    public $logo;
+    public $icon;
 }
