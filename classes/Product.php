@@ -33,6 +33,7 @@ class Product {
         } elseif ( strtolower($this->category) === "cane" ) {
             $this->icon = "https://cdn-icons-png.flaticon.com/512/91/91544.png";
         }
+        return $this->category;
     }
     public function getIcon() {
         return $this->icon;

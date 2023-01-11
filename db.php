@@ -18,13 +18,23 @@ $foods[1]->setCategory($dog->getName());
 $foods[1]->setIcon($dog->getName());
 
 $games = [
-    new Game("Palline con campanella", "https://cdn.shopify.com/s/files/1/0524/0658/3462/products/set-2-palline-in-plastica-con-campanella-mixed-color.jpg?v=1666543991", 2.00, "Plastica", 120),
-    new Game("Corda osso", "https://arcaplanet.vtexassets.com/arquivos/ids/223864/trixie-cane-gioco-corda.jpg?v=637454736645100000", 4.13, "Poliestere", 200),
+    new Game("Palline con campanella", "https://cdn.shopify.com/s/files/1/0524/0658/3462/products/set-2-palline-in-plastica-con-campanella-mixed-color.jpg?v=1666543991", 2.00, "Plastica"),
+    new Game("Corda osso", "https://arcaplanet.vtexassets.com/arquivos/ids/223864/trixie-cane-gioco-corda.jpg?v=637454736645100000", 4.13, "Poliestere"),
 ];
 $games[0]->setCategory($cat->getName());
 $games[0]->setIcon($cat->getName());
 $games[1]->setCategory($dog->getName());
 $games[1]->setIcon($dog->getName());
+try {
+    $games[0]->setWeight(120.00);
+} catch (Exception $e){
+    echo $e->getMessage();
+}
+try {
+    $games[1]->setWeight(200.50);
+} catch (Exception $e){
+    echo $e->getMessage();
+}
 
 $kennels = [
     new Kennel("Cuccia per gatto", "https://m.media-amazon.com/images/I/51ntZoOc1oL._AC_SX425_.jpg", 69.90, "Plastica", 4),
@@ -34,3 +44,13 @@ $kennels[0]->setCategory($cat->getName());
 $kennels[0]->setIcon($cat->getName());
 $kennels[1]->setCategory($dog->getName());
 $kennels[1]->setIcon($dog->getName());
+try {
+    $kennels[0]->setWeight(2.3);
+} catch (Exception $e){
+    echo $e->getMessage();
+}
+try {
+    $kennels[1]->setWeight(4.5);
+} catch (Exception $e){
+    echo $e->getMessage();
+}
