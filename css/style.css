@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 68.75rem;
+  margin: auto;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+li {
+  position: relative;
+  width: calc(100% / 3 - 3.75rem);
+  margin: 2.5rem 1.875rem;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  background-color: #c3c3c3;
+}
+.card {
+  height: 16.875rem;
+}
+.product-name {
+  text-align: center;
+  margin: 0.3125rem 0 0.625rem;
+}
+.icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.625rem;
+  border-radius: 50%;
+  background-color: #c3c3c3;
+}
