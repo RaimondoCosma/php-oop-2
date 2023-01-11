@@ -1,9 +1,9 @@
 <?php
 include_once __DIR__ . "/Product.php";
+include_once __DIR__ . "/../traits/ObjectDetails.php";
 
 class Game extends Product{
-    protected $material;
-    protected $weight;
+    use ObjectDetails;
 
     public function __construct(string $_name, string $_image, float $_price, string $_material, int $_weight)
     {
@@ -11,10 +11,5 @@ class Game extends Product{
         $this->material = $_material;
         $this->weight = $_weight;
     }
-    public function getMaterial() {
-        return $this->material;
-    }
-    public function getWeight() {
-        return $this->weight;
-    }
+
 }
